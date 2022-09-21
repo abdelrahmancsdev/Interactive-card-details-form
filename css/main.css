@@ -1,0 +1,374 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  font-size: 1em;
+}
+
+main .container .form-section .success button, main .container .form-section form .submit {
+  color: hsl(270deg, 3%, 87%);
+  background-color: hsl(278deg, 68%, 11%);
+  font-size: 18px;
+  padding: 0px;
+  margin-bottom: 0px;
+  height: 55px;
+  cursor: pointer;
+}
+
+main {
+  min-height: 100vh;
+  background-image: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 33% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 15px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+main .container {
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 100px;
+}
+main .container .card-section {
+  position: relative;
+  display: grid;
+  gap: 30px;
+}
+main .container .card-section .card-front,
+main .container .card-section .card-back {
+  position: relative;
+  width: 447px;
+  height: 245px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  padding: 30px;
+  color: hsl(0deg, 0%, 100%);
+  -webkit-box-shadow: 0px 25px 25px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 25px 25px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+main .container .card-section .card-front {
+  background-image: url(../images/bg-card-front.png);
+  right: 100px;
+  display: grid;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+main .container .card-section .card-front .card-details .card-number {
+  font-size: 29px;
+  letter-spacing: 3px;
+}
+main .container .card-section .card-front .card-details .card-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  margin-top: 20px;
+}
+main .container .card-section .card-front .card-details .card-footer .holder-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+main .container .card-section .card-front .card-details .card-footer .exp-date {
+  letter-spacing: 2px;
+}
+main .container .card-section .card-back {
+  background-image: url(../images/bg-card-back.png);
+  right: 10px;
+}
+main .container .card-section .card-back .cvc {
+  position: absolute;
+  right: 60px;
+  top: 112px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+main .container .form-section {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+main .container .form-section form label {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: hsl(278deg, 68%, 11%);
+}
+main .container .form-section form .err-display::after {
+  position: absolute;
+  font-size: 12px;
+  top: -35px;
+  color: hsl(0deg, 100%, 66%);
+}
+main .container .form-section form input {
+  width: 100%;
+  height: 45px;
+  padding: 15px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+main .container .form-section form input::-webkit-input-placeholder {
+  font-size: 18px;
+  color: hsl(270deg, 3%, 77%);
+}
+main .container .form-section form input::-moz-placeholder {
+  font-size: 18px;
+  color: hsl(270deg, 3%, 77%);
+}
+main .container .form-section form input:-ms-input-placeholder {
+  font-size: 18px;
+  color: hsl(270deg, 3%, 77%);
+}
+main .container .form-section form input::-ms-input-placeholder {
+  font-size: 18px;
+  color: hsl(270deg, 3%, 77%);
+}
+main .container .form-section form input::placeholder {
+  font-size: 18px;
+  color: hsl(270deg, 3%, 77%);
+}
+main .container .form-section form input:focus {
+  outline: none;
+  border-color: hsl(249deg, 99%, 64%);
+}
+main .container .form-section form input.empty-err, main .container .form-section form input.length-err {
+  border: 1px solid hsl(0deg, 100%, 66%);
+  margin-bottom: 40px;
+}
+main .container .form-section form input.empty-err.empty-err + .err-display::after, main .container .form-section form input.length-err.empty-err + .err-display::after {
+  content: "Can't be blank";
+}
+main .container .form-section form input.empty-err.length-err + .err-display::after, main .container .form-section form input.length-err.length-err + .err-display::after {
+  content: "Number is shorter than expected!";
+}
+main .container .form-section form .err-display {
+  display: block;
+  position: relative;
+}
+main .container .form-section form .form-footer {
+  display: grid;
+  grid-template-columns: calc(50% - 20px) auto;
+  gap: 20px;
+}
+main .container .form-section form .form-footer .exp-container.empty-err .err-display::after {
+  content: "Can't be blank";
+}
+main .container .form-section form .form-footer .exp-container.length-err .err-display::after {
+  content: "Number is shorter than expected!";
+}
+main .container .form-section form .form-footer .exp-container .exp-my {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+main .container .form-section form .submit.err {
+  -webkit-animation: shake 0.7s;
+          animation: shake 0.7s;
+}
+main .container .form-section form,
+main .container .form-section .success {
+  width: 100%;
+  max-width: 375px;
+}
+main .container .form-section .success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .container .form-section .success h2 {
+  margin: 40px 0px 20px;
+  text-transform: uppercase;
+  color: hsl(278deg, 68%, 11%);
+  letter-spacing: 3px;
+}
+main .container .form-section .success p {
+  color: hsl(279deg, 6%, 55%);
+  margin-bottom: 40px;
+}
+main .container .form-section .success button {
+  padding: 15px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  border-radius: 10px;
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  main .container {
+    gap: 70px;
+  }
+  main .container .card-section .card-front {
+    right: 0px;
+  }
+  main .container .card-section .card-back {
+    right: -30px;
+  }
+}
+@media (max-width: 900px) {
+  main {
+    background-image: url(../images/bg-main-mobile.png);
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main .container {
+    grid-template-columns: auto;
+  }
+  main .container .card-section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .container .card-section .card-front,
+main .container .card-section .card-back {
+    position: absolute;
+  }
+  main .container .card-section .card-front {
+    right: auto;
+    left: 10px;
+    top: 140px;
+    z-index: 1;
+  }
+  main .container .card-section .card-back {
+    right: 30px;
+  }
+  main .container .form-section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 375px;
+  }
+}
+@media (max-width: 600px) {
+  main .container .card-section .card-front,
+main .container .card-section .card-back {
+    width: 275px;
+    height: 150px;
+    background-size: 100%;
+    padding: 15px;
+  }
+  main .container .card-section .card-front {
+    left: 0px;
+    top: 85px;
+  }
+  main .container .card-section .card-front .card-logo {
+    width: 50px;
+  }
+  main .container .card-section .card-front .card-details .card-number {
+    font-size: 16px;
+  }
+  main .container .card-section .card-front .card-details .card-footer {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+  main .container .card-section .card-back {
+    right: 15px;
+  }
+  main .container .card-section .card-back .cvc {
+    font-size: 10px;
+    right: 33px;
+    top: 67px;
+  }
+  main .container .form-section {
+    margin-top: 200px;
+  }
+}
+@-webkit-keyframes shake {
+  10% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    background-color: hsl(0deg, 100%, 66%);
+  }
+  30% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    background-color: hsl(0deg, 100%, 66%);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    background-color: hsl(0deg, 100%, 66%);
+  }
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    background-color: hsl(0deg, 100%, 66%);
+  }
+  80% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    background-color: hsl(278deg, 68%, 11%);
+  }
+}
+@keyframes shake {
+  10% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    background-color: hsl(0deg, 100%, 66%);
+  }
+  30% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    background-color: hsl(0deg, 100%, 66%);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+    background-color: hsl(0deg, 100%, 66%);
+  }
+  70% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    background-color: hsl(0deg, 100%, 66%);
+  }
+  80% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  100% {
+    background-color: hsl(278deg, 68%, 11%);
+  }
+}/*# sourceMappingURL=main.css.map */
